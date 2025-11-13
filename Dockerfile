@@ -13,7 +13,7 @@ RUN npm run build
 FROM nginx:stable-alpine
 
 # Копируем "собранные" файлы из папки /app/dist ЭТАПА 1
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/dist/. /usr/share/nginx/html/
 
 # Настраиваем Nginx
 COPY --from=builder /app/nginx.conf /etc/nginx/conf.d/default.conf
