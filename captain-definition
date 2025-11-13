@@ -1,4 +1,9 @@
 {
   "schemaVersion": 2,
-  "dockerfilePath": "./Dockerfile"
+  "dockerfilePath": "./Dockerfile",
+  "build": {
+    "buildArgs": {
+      "GEMINI_API_KEY": "$GEMINI_API_KEY"
+    }
+  }
 }
